@@ -1,0 +1,26 @@
+using System;
+using System.Linq;
+
+namespace IntroducaoLINQ
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Especificar a base de Dados
+            int[] baseDeDados = new int[] { 2, 3, 4, 5 };
+
+            // Especificar a expressão de Consulta
+            var result = baseDeDados
+                .Where( x => x % 2 == 0)
+                .Select(x => x * 10);
+
+            // Executar a consulta
+
+            foreach(int x in result)
+            {
+                Console.WriteLine(x);
+            }
+        }
+    }
+}
